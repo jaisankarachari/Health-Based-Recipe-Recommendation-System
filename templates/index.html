@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Recipe Recommendation System</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #6aeb79 0%, #764ba2 100%);
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero-section">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+            <div class="logout-btn">
+                <a href="/logout">Logout</a>
+            </div>
+
+            <div class="left-panel">
+                <h1>🍽 Health Based Recipe Recommendation System</h1>
+                <p class="tagline">
+                    AI Powered Food Suggestion Platform based on Ingredients,
+                    Diet Preference and Health Conditions.
+                </p>
+
+                <ul class="features">
+                    <li>✅ AI Based Recommendation</li>
+                    <li>✅ Health Condition Filtering</li>
+                    <li>✅ Diet Preference Matching</li>
+                    <li>✅ Smart Ingredient Analysis</li>
+                </ul>
+            </div>
+
+            <div class="glass-form">
+
+                <h2>Get Your Personalized Recipes</h2>
+                <p class="subtitle">Fill the details below</p>
+
+                <form action="/recommend" method="POST">
+
+                    <div class="input-box">
+                        <label>👤 First Name</label>
+                        <input type="text" name="first_name" placeholder="Enter your first name" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>🎂 Age</label>
+                        <input type="number" name="age" min="1" max="120" placeholder="Enter your age" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>⚧ Gender</label>
+                        <select name="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label>📏 Height (cm)</label>
+                        <input type="number" name="height" min="50" max="250" placeholder="Enter height in cm" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>⚖️ Weight (kg)</label>
+                        <input type="number" name="weight" min="10" max="300" placeholder="Enter weight in kg" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>🥗 Diet Type</label>
+                        <select name="diet" required>
+                            <option value="">Select Diet</option>
+                            <option value="veg">Vegetarian</option>
+                            <option value="non-veg">Non Vegetarian</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label>❤️ Health Condition</label>
+                        <select name="condition" required>
+                            <option value="">Select Condition</option>
+                            <option value="normal">Normal</option>
+                            <option value="diabetes">Diabetes</option>
+                            <option value="fitness">Fitness</option>
+                            <option value="fever">Fever</option>
+                            <option value="bp">BP</option>
+                            <option value="heart attacks">Heart Attack</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label>⏱️ Cooking Time (minutes)</label>
+                        <input type="number" name="cooking_time" min="10" max="300" placeholder="10-300 minutes" required>
+                    </div>
+
+                    <button type="submit" class="glow-btn">
+                        🔍 Get Smart Recipes
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

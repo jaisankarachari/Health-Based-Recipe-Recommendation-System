@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+/* ---------------- HERO SECTION ---------------- */
+
+.hero-section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    color: white;
+    position: relative;
+}
+
+.logout-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.logout-btn a {
+    color: white;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.logout-btn a:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* LEFT PANEL */
+
+.left-panel h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    background: linear-gradient(135deg,#ff9800,#ff5722);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+    font-size: 18px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.features {
+    list-style: none;
+}
+
+.features li {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+/* GLASS FORM */
+
+.glass-form {
+    background: rgba(255,255,255,0.12);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    border-radius: 22px;
+    padding: 40px 35px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+    transform: perspective(900px) rotateY(-4deg);
+    transition: 0.5s;
+}
+
+.glass-form:hover {
+    transform: perspective(900px) rotateY(0deg) scale(1.03);
+}
+
+.glass-form h2 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 26px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 25px;
+    opacity: 0.8;
+}
+
+/* INPUT BOX */
+
+.input-box {
+    margin-bottom: 18px;
+}
+
+.input-box label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+/* BUTTON */
+
+.glow-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    background: linear-gradient(135deg,#ff9800,#ff5722);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255,140,0,0.7);
+    transition: 0.4s;
+}
+
+.glow-btn:hover {
+    box-shadow: 0 0 25px rgba(255,140,0,1);
+    transform: translateY(-2px);
+}
+
+/* ---------------- DASHBOARD ---------------- */
+
+.dashboard {
+    min-height: 100vh;
+    padding: 50px 8%;
+    color: white;
+}
+
+.top-bar {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.top-bar h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+/* GRID */
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 28px;
+}
+
+/* 3D CARD */
+
+.recipe-card-3d {
+    background: rgba(255,255,255,0.12);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+    transition: 0.5s;
+    transform-style: preserve-3d;
+}
+
+.recipe-card-3d:hover {
+    transform: rotateY(8deg) rotateX(5deg) scale(1.05);
+}
+
+.card-header h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ff9800;
+}
+
+.card-body p {
+    font-size: 13px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.card-footer {
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    background: linear-gradient(135deg,#ff9800,#ff5722);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+/* BACK BUTTON */
+
+.back-area {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background: linear-gradient(135deg,#ff9800,#ff5722);
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 0 15px rgba(255,140,0,0.6);
+    transition: 0.4s;
+}
+
+.back-btn:hover {
+    box-shadow: 0 0 25px rgba(255,140,0,1);
+    transform: translateY(-2px);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width:900px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+.detail-bg {
+    min-height: 100vh;
+    background: linear-gradient(135deg,#1d976c,#93f9b9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-container {
+    width: 70%;
+    background: rgba(255,255,255,0.15);
+    padding: 30px;
+    border-radius: 20px;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.detail-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+    from {transform: scale(0.8); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #1d976c;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #0c6b4f;
+    transform: scale(1.05);
+}
+.result-bg {
+    min-height: 100vh;
+    background: linear-gradient(135deg,#ffecd2,#fcb69f);
+    padding: 40px;
+}
+
+.title {
+    text-align: center;
+    font-size: 38px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: 0.4s;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.card h2 {
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+
+.click-text {
+    margin-top: 12px;
+    color: #1d976c;
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+    margin-top: 40px;
+}

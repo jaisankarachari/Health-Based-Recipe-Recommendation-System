@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommended Recipes</title>
+
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="result-bg">
+
+    <h1 class="title">👋 Hello, {{ first_name }}! 🍽 Recommended Recipes For You</h1>
+
+    <div class="card-container">
+
+        {% for r in results %}
+
+        <a href="/recipe/{{ r['recipe_name'] }}" class="card">
+
+            <h2>{{ r['recipe_name'] }}</h2>
+
+            <p><b>🥗 Diet:</b> {{ r['diet'] }}</p>
+            <p><b>❤️ Condition:</b> {{ r['condition'] }}</p>
+            <p><b>🔥 Calories:</b> {{ r['calories'] }} kcal</p>
+            <p><b>⏱ Time:</b> {{ r['time'] }} min</p>
+
+            <p class="click-text">👉 Click to view full recipe</p>
+
+        </a>
+
+        {% endfor %}
+
+    </div>
+
+    <div class="center">
+        <a href="/" class="back-btn">⬅ Back to Home</a>
+    </div>
+
+</body>
+</html>
